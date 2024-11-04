@@ -1,6 +1,8 @@
 // pages/index.js
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
+import img1 from "../../public/profile_img.png";
 
 export default function Home() {
   return (
@@ -45,8 +47,8 @@ export default function Home() {
       <main className="flex items-center justify-center mt-16 px-8">
         <div className="flex flex-col md:flex-row items-center md:items-start space-x-8">
           <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-gray-800 shadow-lg">
-            <img
-              src="/profile.jpg"
+            <Image
+              src={img1}
               alt="Profile Picture"
               className="w-full h-full object-cover"
             />
