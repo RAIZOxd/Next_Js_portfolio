@@ -38,9 +38,6 @@ export default function Home() {
             <li className="hover:text-white">
               <Link href="/contact">Contact</Link>
             </li>
-            <li className="hover:text-white">
-              <Link href="/extra">Extra</Link>
-            </li>
           </ul>
         </nav>
       </header>
@@ -74,6 +71,96 @@ export default function Home() {
             Contact
           </button>
         </div>
+        
+      </main>
+      <main className="flex flex-col items-center mt-16 px-8">
+       {/* "What I Do" Section */}
+       <section className="mt-16 max-w-6xl text-left">
+          <h2 className="text-2xl font-bold text-white mb-4">What I Do</h2>
+          <div className="relative mb-8">
+            <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
+            <div className="w-28 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex items-start space-x-4">
+              <div className="text-3xl text-blue-500">✍️</div> {/* Icon Placeholder */}
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-2">Copywrite</h3>
+                <p className="text-gray-400">
+                  Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Vivamus blandit.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="text-3xl text-blue-500">🛒</div> {/* Icon Placeholder */}
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-2">Ecommerce</h3>
+                <p className="text-gray-400">
+                  Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Vivamus blandit.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="text-3xl text-blue-500">💻</div> {/* Icon Placeholder */}
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-2">Web Design</h3>
+                <p className="text-gray-400">
+                  Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Vivamus blandit.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="text-3xl text-blue-500">📣</div> {/* Icon Placeholder */}
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-2">Marketing</h3>
+                <p className="text-gray-400">
+                  Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Vivamus blandit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="mt-16 max-w-6xl text-left">
+          <h2 className="text-2xl font-bold text-white mb-4">Testimonials</h2>
+          <div className="relative mb-8">
+            <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
+            <div className="w-36 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gray-800 p-6 rounded-lg flex items-start">
+              <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-700 mr-4">
+                <Image src="/path-to-image" alt="Testimonial 1" width={64} height={64} />
+              </div>
+              <div>
+                <p className="text-gray-400 mb-4">
+                  Donec eu est vel metus consequat volutpat. Nunc aliquet euismod mauris, a feugiat urna ullamcorper non.
+                </p>
+                <h3 className="text-lg font-semibold text-white">Billy Adams</h3>
+                <p className="text-gray-500">Rolling Thunder</p>
+              </div>
+            </div>
+
+            <div className="bg-gray-800 p-6 rounded-lg flex items-start">
+              <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-700 mr-4">
+                <Image src="/path-to-image" alt="Testimonial 2" width={64} height={64} />
+              </div>
+              <div>
+                <p className="text-gray-400 mb-4">
+                  Nam tempor commodo mi id sodales. Aenean sit amet nibh nec sapien consequat porta a sit amet diam.
+                </p>
+                <h3 className="text-lg font-semibold text-white">Gary Johnson</h3>
+                <p className="text-gray-500">Locost Accessories</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
