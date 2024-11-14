@@ -45,11 +45,11 @@ const Testimonials = () => {
     <h2 className="text-2xl font-bold text-white mb-4">Testimonials</h2>
     <div className="relative mb-8">
       <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
-      <div className="w-28 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
+      <div className="w-40 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
     </div>
       <Slider {...settings}>
         {testimonialsData.map((testimonial) => (
-          <div key={testimonial.id} className="testimonial-card p-6 bg-gray-800 rounded-lg shadow-lg flex items-start relative">
+          <div key={testimonial.id} className="testimonial-card p-6 rounded-lg shadow-lg flex items-start relative">
             <div className="w-16 h-16 rounded-full overflow-hidden mr-4 flex-shrink-0">
               <Image src={testimonial.image} alt={testimonial.name} width={64} height={64} className="object-cover" />
             </div>
@@ -64,12 +64,18 @@ const Testimonials = () => {
 
       <style jsx>{`
         .testimonials-container {
-          background-color: #1a1a1a;
+          background-color: #222222;
           padding: 2rem;
           border-radius: 8px;
         }
+        .underline {
+          width: 40px;
+          height: 2px;
+          background-color: #222222;
+          margin-left: 5px;
+        }
         .testimonial-card {
-          background-color: #333;
+          background-color: #222222;
           padding: 1.5rem;
           border-radius: 8px;
           position: relative;

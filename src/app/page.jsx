@@ -5,6 +5,9 @@ import Link from "next/link";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import img1 from "../../public/profile_img.png";
+import Clients from "./(components)/Clients";
+import Footer from "./(components)/Footer";
+import FunFacts from "./(components)/FunFacts";
 import Testimonials from "./(components)/Testimonials";
 
 export default function Home() {
@@ -127,10 +130,26 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-{/* Testimonials Section */}
+        
+    {/* Testimonials Section */}
 
 <div>  <Testimonials /></div>
+      </main>
+
+
+
+
+      <main>
+    {/* Client Section */}
+    <div><Clients/></div>
+
+
+    {/* FunFacts Section */}
+    <div><FunFacts/></div>
+
+
+    {/* Footer Section */}
+      <div><Footer/></div>
       </main>
     </div>
   );
