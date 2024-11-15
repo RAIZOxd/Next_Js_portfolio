@@ -1,11 +1,13 @@
-
 // ContactSection Component
+import Navbar from "../(components)/Navbar";
 const ContactSection = () => {
   return (
-    <div className="min-h-screen p-10 text-white">
+    
+    <div className="min-h-screen text-white">
+      <Navbar></Navbar>
       {/* Contact Header */}
       <div className="h-48 flex items-center justify-between px-14 border-t border-b border-gray-700">
-        <h2 className="text-4xl font-bold text-white">Contact</h2>
+        <h1 className="text-4xl font-bold">Contact</h1>
         <a href="#get-in-touch" className="text-gray-400 text-lg">
           Get in Touch
         </a>
@@ -144,9 +146,9 @@ const ContactPage = () => {
             ></textarea>
             <div className="flex items-center space-x-4">
               {/* Placeholder for reCAPTCHA */}
-              <div className="w-32 h-16 bg-gray-700 rounded-md flex items-center justify-center text-gray-400">
+              {/* <div className="w-32 h-16 bg-gray-700 rounded-md flex items-center justify-center text-gray-400">
                 reCAPTCHA
-              </div>
+              </div> */}
             </div>
             <button className="px-6 py-2 border-2 border-blue-500 text-gray-200 rounded-3xl hover:bg-blue-500 hover:text-white transition">
               Send message

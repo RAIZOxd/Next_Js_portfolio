@@ -1,11 +1,13 @@
+import Navbar from "../(components)/Navbar";
 //BlogSection
 
 const BlogSection = () => {
   return (
-    <div className="min-h-screen p-10 text-white">
+    <div className="min-h-screen text-white">
+      <Navbar></Navbar>
       {/* Blog Header */}
-      <div className="h-48 flex items-center justify-start px-14 border-t border-b border-gray-700">
-        <h2 className="text-4xl font-bold text-white">Blog 2 Columns</h2>
+      <div className="h-48 flex items-center justify-start px-14 border-t border-b border-gray-500">
+        <h2 className="text-4xl font-bold text-white">Blog</h2>
       </div>
 
       {/* Blog Content Grid */}
@@ -55,6 +57,7 @@ const BlogPost = ({ category, date, title, imageUrl }) => {
         <h3 className="text-xl font-semibold text-white">{title}</h3>
       </div>
     </div>
+    
   );
 };
 

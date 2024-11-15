@@ -1,17 +1,19 @@
+import Navbar from "../(components)/Navbar";
 import Skills from "../(components)/Resume";
 
 const ResumePage = () => {
   return (
-    <div className=" text-white p-16">
-      <div className="max-w-screen-xl mx-auto">
+    <div className=" min-h-screen text-white">
+      <Navbar></Navbar>
+      
         {/* Top Resume Header Section */}
-        <div className="h-48 flex justify-between border-t border-b border-gray-500 items-center mb-20">
-          <h1 className="text-5xl font-bold">Resume</h1>
+        <div className="h-48 flex items-center justify-between px-14 border-t border-b border-gray-500">
+          <h1 className="text-4xl font-bold">Resume</h1>
           <span className="text-gray-400 text-lg">8 Years of Experience</span>
         </div>
         
         {/* Education and Experience Sections */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 py-10">
           {/* Education Section */}
           <div>
             <h2 className="text-3xl font-bold mb-8">
@@ -119,7 +121,7 @@ const ResumePage = () => {
         </div>
 
         <div><Skills/></div>
-      </div>
+      
     </div>
   );
 };

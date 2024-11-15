@@ -1,13 +1,13 @@
 // pages/index.js
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import img1 from "../../public/profile_img.png";
 import Clients from "./(components)/Clients";
 import Footer from "./(components)/Footer";
 import FunFacts from "./(components)/FunFacts";
+import Navbar from "./(components)/Navbar";
 import Testimonials from "./(components)/Testimonials";
 
 export default function Home() {
@@ -16,69 +16,39 @@ export default function Home() {
       <Head>
         <title>Frontend Developer - Alex Smith</title>
       </Head>
-      <header className="flex justify-between items-center p-6">
-        <div className="flex items-center">
-          <div className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-black text-lg	">
-            A
-          </div>
-          <span className="ml-3 text-xl font-bold text-white">Alex</span>
-          <span className="ml-3 text-xl  text-white">Smith</span>
-        </div>
-        <nav className="ml-auto text-gray-300">
-          <ul className="flex space-x-16 font-light text-sm">
+     <Navbar></Navbar>
+     <main className="flex flex-col items-center mt-8 px-4 md:flex-row md:items-start md:justify-center md:mt-16 md:px-8 space-y-6 md:space-y-0 md:space-x-12">
+  {/* Profile Picture Section */}
+  <div className="flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-800 shadow-lg">
+    <Image
+      src={img1}
+      alt="Profile Picture"
+      className="w-full h-full object-cover"
+    />
+  </div>
 
-            <li
-              className="hover:text-white"
-            >
-              <Link href="/">About Me</Link>
-            </li>
-            <li className="hover:text-white">
-              <Link href="/resume">Resume</Link>
-            </li>
-            <li className="hover:text-white">
-              <Link href="/portfolio">Portfolio</Link>
-            </li>
-            <li className="hover:text-white">
-              <Link href="/blog">Blog</Link>
-            </li>
-            <li className="hover:text-white">
-              <Link href="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main className="flex items-center justify-center mt-16 px-8">
-        <div className="flex flex-col md:flex-row items-center md:items-start space-x-8">
-          <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-gray-800 shadow-lg">
-            <Image
-              src={img1}
-              alt="Profile Picture"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
+  {/* Info Section */}
+  <div className="max-w-lg text-center md:text-left space-y-4 md:space-y-6">
+    <h2 className="text-base sm:text-lg text-gray-500">Frontend Developer</h2>
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Alex Smith</h1>
+    <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
+      Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis,
+      risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis
+      purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.
+    </p>
 
-        <div className="space-x-10 mt-8 md:mt-0 text-center md:text-left max-w-lg">
-            <h2 className="text-lg text-gray-500">Frontend-developer</h2>
-            <h1 className="text-5xl font-bold text-white mt-2">Alex Smith</h1>
-            <p className="mt-4 text-gray-300 leading-relaxed">
-              Fusce tempor magna mi, non egestas velit ultricies nec. Aenean
-              convallis, risus non condimentum gravida, odio mauris ullamcorper
-              felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna,
-              a placerat sapien pretium eu.
-            </p>
-        </div>
+    {/* Button Section */}
+    <div className="flex flex-col items-center md:flex-row md:justify-start md:items-center space-y-4 md:space-y-0 md:space-x-4 mt-4">
+      <button className="px-6 py-2 border-2 border-blue-500 text-gray-200 rounded-3xl hover:bg-blue-500 hover:text-white transition">
+        Download CV
+      </button>
+      <button className="px-6 py-2 border-2 border-gray-400 text-gray-200 rounded-3xl hover:bg-gray-400 hover:text-gray-800 transition">
+        Contact
+      </button>
+    </div>
+  </div>
+</main>
 
-        <div className="mt-72 flex space-x-4 justify-center md:justify-start">
-          <button className="px-6 py-2 border-2 border-blue-500 text-gray-200 rounded-3xl hover:bg-blue-500 hover:text-white transition">
-            Download CV
-          </button>
-          <button className="px-6 py-2 border-2 border-gray-400 text-gray-200 rounded-3xl hover:bg-gray-400 hover:text-gray-800 transition">
-            Contact
-          </button>
-        </div>
-        
-      </main>
       <main className="flex flex-col items-center mt-16 px-8">
        {/* "What I Do" Section */}
        <section className="mt-16 max-w-6xl text-left">
