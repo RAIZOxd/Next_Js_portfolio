@@ -4,7 +4,7 @@ const ContactSection = () => {
     
     <div className="min-h-screen text-white">
       {/* Contact Header */}
-      <div className="h-48 flex items-center justify-between px-14 border-t border-b border-gray-700">
+      <div className="h-48 flex items-center justify-between px-14 border-t border-b border-gray-500">
         <h1 className="text-4xl font-bold">Contact</h1>
         <a href="#get-in-touch" className="text-gray-400 text-lg">
           Get in Touch
@@ -30,7 +30,7 @@ const ContactSection = () => {
 // ContactPage Component
 const ContactPage = () => {
   return (
-    <div className=" text-white py-16 px-8">
+    <div>
       {/* Contact Section */}
       <ContactSection />
 
