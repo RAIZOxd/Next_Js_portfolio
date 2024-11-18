@@ -1,10 +1,8 @@
 // ContactSection Component
-import Navbar from "../(components)/Navbar";
 const ContactSection = () => {
   return (
     
     <div className="min-h-screen text-white">
-      <Navbar></Navbar>
       {/* Contact Header */}
       <div className="h-48 flex items-center justify-between px-14 border-t border-b border-gray-700">
         <h1 className="text-4xl font-bold">Contact</h1>

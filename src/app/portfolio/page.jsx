@@ -1,10 +1,8 @@
-import Navbar from "../(components)/Navbar";
 //PortfolioSection
 
 const PortfolioSection = () => {
   return (
     <div className="min-h-screen text-white">
-      <Navbar></Navbar>
       {/* Portfolio Header */}
       <div className="h-48 flex items-center justify-start px-14 border-t border-b border-gray-500">
         <h2 className="text-4xl font-bold text-white">Portfolio</h2>

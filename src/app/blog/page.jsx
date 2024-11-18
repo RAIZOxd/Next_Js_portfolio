@@ -1,10 +1,8 @@
-import Navbar from "../(components)/Navbar";
 //BlogSection
 
 const BlogSection = () => {
   return (
     <div className="min-h-screen text-white">
-      <Navbar></Navbar>
       {/* Blog Header */}
       <div className="h-48 flex items-center justify-start px-14 border-t border-b border-gray-500">
         <h2 className="text-4xl font-bold text-white">Blog</h2>

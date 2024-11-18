@@ -1,11 +1,8 @@
-import Navbar from "../(components)/Navbar";
 import Skills from "../(components)/Resume";
 
 const ResumePage = () => {
   return (
     <div className=" min-h-screen text-white">
-      <Navbar></Navbar>
-      
         {/* Top Resume Header Section */}
         <div className="h-48 flex items-center justify-between px-14 border-t border-b border-gray-500">
           <h1 className="text-4xl font-bold">Resume</h1>

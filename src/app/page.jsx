@@ -5,9 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import img1 from "../../public/profile_img.png";
 import Clients from "./(components)/Clients";
-import Footer from "./(components)/Footer";
 import FunFacts from "./(components)/FunFacts";
-import Navbar from "./(components)/Navbar";
 import Testimonials from "./(components)/Testimonials";
 
 export default function Home() {
@@ -16,7 +14,6 @@ export default function Home() {
       <Head>
         <title>Frontend Developer - Alex Smith</title>
       </Head>
-     <Navbar></Navbar>
      <main className="flex flex-col items-center mt-8 px-4 md:flex-row md:items-start md:justify-center md:mt-16 md:px-8 space-y-6 md:space-y-0 md:space-x-12">
   {/* Profile Picture Section */}
   <div className="flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-800 shadow-lg">
@@ -117,9 +114,6 @@ export default function Home() {
     {/* FunFacts Section */}
     <div><FunFacts/></div>
 
-
-    {/* Footer Section */}
-      <div><Footer/></div>
       </main>
     </div>
   );
