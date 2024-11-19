@@ -1,8 +1,26 @@
+'use client'
+import { useEffect, useRef } from 'react';
 import Skills from "../(components)/Skills";
+import { animateFadeInUp } from '../(components)/gsapAnimations';
 
 const ResumePage = () => {
+  // Refs for the sections to be animated
+  const sectionRef = useRef(null);
+  const fadeInUpElements = useRef([]); // Array to hold references to elements
+
+  useEffect(() => {
+    if (fadeInUpElements.current.length > 0 && sectionRef.current) {
+      animateFadeInUp(fadeInUpElements.current, sectionRef.current); // Call the animation function
+    }
+  }, []);
+
+  const addToRefs = (el) => {
+    if (el && !fadeInUpElements.current.includes(el)) {
+      fadeInUpElements.current.push(el); // Add element to refs array
+    }
+  };
   return (
-    <div className=" min-h-screen text-white">
+    <div className=" min-h-screen text-white" ref={sectionRef}>
       {/* Top Resume Header Section */}
       <div className="h-48 flex items-center justify-between px-14 border-t border-b border-gray-500">
         <h1 className="text-4xl font-bold">Resume</h1>
@@ -10,7 +28,7 @@ const ResumePage = () => {
       </div>
 
       {/* Education and Experience Sections */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-8 px-4 sm:px-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-8 px-4 sm:px-8" ref={addToRefs}>
         {/* Education Section */}
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-6">
@@ -150,7 +168,7 @@ const ResumePage = () => {
         </div>
       </div>
 
-      <div>
+      <div ref={sectionRef}>
         <Skills />
       </div>
     </div>
