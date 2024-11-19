@@ -1,17 +1,17 @@
-'use client'
+'use client';
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-[#252525] py-4 text-gray-400">
-      <div className="container mx-auto flex justify-between items-center px-4">
+    <footer className="bg-[#252525] py-4 text-gray-400 border-t border-gray-700">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         {/* Social Links */}
-        <div className="flex space-x-16">
+        <div className="flex space-x-6 justify-center md:justify-start">
           <a
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white"
+            className="hover:text-white text-lg transition"
           >
             <FaTwitter />
           </a>
@@ -19,7 +19,7 @@ const Footer = () => {
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white"
+            className="hover:text-white text-lg transition"
           >
             <FaFacebook />
           </a>
@@ -27,23 +27,19 @@ const Footer = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white"
+            className="hover:text-white text-lg transition"
           >
             <FaInstagram />
           </a>
         </div>
 
         {/* Copyright Text */}
-        <div className="text-sm">© 2024 All rights reserved.</div>
+        <div className="text-center md:text-right text-sm">
+          © 2024 All rights reserved.
+        </div>
       </div>
-
-      <style jsx>{`
-        .footer {
-          border-top: 1px solid #333;
-        }
-      `}</style>
     </footer>
   );
 };
 
-export default Footer; 
+export default Footer;

@@ -39,7 +39,7 @@ const Clients = () => {
   };
 
   return (
-    <main className="flex flex-col items-center mt-16 px-8">
+    <main className="mt-16 px-8">
     <section className=" mt-16 max-w-6xl mx-auto text-center">
       <h2 className="text-2xl font-bold text-white mb-4 text-left">Clients</h2>
       <div className="relative mb-8">

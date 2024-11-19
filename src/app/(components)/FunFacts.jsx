@@ -10,6 +10,7 @@ const FunFacts = () => {
   ];
 
   return (
+    <main className="mt-16 px-8">
     <div className="bg-[#222222] text-gray-400 py-10">
       <div className="mt-16 max-w-6xl mx-auto text-center">
         <h2 className="text-2xl font-bold text-white mb-4 text-left">Fun Facts</h2>
@@ -33,6 +34,7 @@ const FunFacts = () => {
         </div>
       </div>
     </div>
+    </main>
   );
 };
 

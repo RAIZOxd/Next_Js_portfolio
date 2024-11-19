@@ -98,15 +98,13 @@ export default function Home() {
           </div>
         </section>
         
-    {/* Testimonials Section */}
-
-<div>  <Testimonials /></div>
       </main>
 
+    {/* Testimonials Section */}
+
+    <div>  <Testimonials /></div>
 
 
-
-      <main>
     {/* Client Section */}
     <div><Clients/></div>
 
@@ -114,7 +112,7 @@ export default function Home() {
     {/* FunFacts Section */}
     <div><FunFacts/></div>
 
-      </main>
+      
     </div>
   );
 }
