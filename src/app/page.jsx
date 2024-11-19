@@ -1,22 +1,40 @@
 // pages/index.js
+'use client'
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect, useRef } from 'react';
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import img1 from "../../public/profile_img.png";
 import Clients from "./(components)/Clients";
 import FunFacts from "./(components)/FunFacts";
 import Testimonials from "./(components)/Testimonials";
+import { animateFadeInUp } from "./(components)/gsapAnimations";
 
 export default function Home() {
+  // Refs for the sections to be animated
+  const sectionRef = useRef(null);
+  const fadeInUpElements = useRef([]); // Array to hold references to elements
+
+  useEffect(() => {
+    if (fadeInUpElements.current.length > 0 && sectionRef.current) {
+      animateFadeInUp(fadeInUpElements.current, sectionRef.current); // Call the animation function
+    }
+  }, []);
+
+  const addToRefs = (el) => {
+    if (el && !fadeInUpElements.current.includes(el)) {
+      fadeInUpElements.current.push(el); // Add element to refs array
+    }
+  };
   return (
-    <div className="min-h-screen bg-darkGray text-gray-400">
+    <div className="min-h-screen bg-darkGray text-gray-400" ref={sectionRef}>
       <Head>
         <title>Frontend Developer - Alex Smith</title>
       </Head>
      <main className="flex flex-col items-center mt-8 px-4 md:flex-row md:items-start md:justify-center md:mt-16 md:px-8 space-y-6 md:space-y-0 md:space-x-12">
   {/* Profile Picture Section */}
-  <div className="flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-800 shadow-lg">
+  <div className="flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-800 shadow-lg" ref={addToRefs}>
     <Image
       src={img1}
       alt="Profile Picture"
@@ -25,7 +43,7 @@ export default function Home() {
   </div>
 
   {/* Info Section */}
-  <div className="max-w-lg text-center md:text-left space-y-4 md:space-y-6">
+  <div className="max-w-lg text-center md:text-left space-y-4 md:space-y-6" ref={addToRefs}>
     <h2 className="text-base sm:text-lg text-gray-500">Frontend Developer</h2>
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Alex Smith</h1>
     <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
@@ -48,7 +66,7 @@ export default function Home() {
 
       <main className="flex flex-col items-center mt-16 px-8">
        {/* "What I Do" Section */}
-       <section className="mt-16 max-w-6xl text-left">
+       <section className="mt-16 max-w-6xl text-left" ref={addToRefs}>
           <h2 className="text-2xl font-bold text-white mb-4">What I Do</h2>
           <div className="relative mb-8">
             <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
@@ -102,15 +120,15 @@ export default function Home() {
 
     {/* Testimonials Section */}
 
-    <div>  <Testimonials /></div>
+    <div ref={addToRefs}>  <Testimonials /></div>
 
 
     {/* Client Section */}
-    <div><Clients/></div>
+    <div ref={addToRefs}><Clients/></div>
 
 
     {/* FunFacts Section */}
-    <div><FunFacts/></div>
+    <div ref={addToRefs}><FunFacts/></div>
 
       
     </div>

@@ -8,7 +8,7 @@ const Skills = () => {
         
         {/* Certificates Section */}
         <section>
-          <h2 className="text-2xl font-bold border-b-2 border-blue-500 inline-block mb-6">Certificates</h2>
+          <h2 className="text-3xl font-bold border-b-2 border-blue-500 inline-block mb-6">Certificates</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
             <CertificateCard icon="{less}" title="Psychology of Internation Design" />
             <CertificateCard icon="jQuery" title="Psychology of Internation Design" />
