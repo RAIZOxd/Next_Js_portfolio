@@ -36,6 +36,8 @@ const Testimonials = () => {
     slidesToShow: 2, // Default for large screens
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true, // Enable auto-slide
+    autoplaySpeed: 3000, // Slide every 3 seconds
     responsive: [
       {
         breakpoint: 1024, // For medium screens
@@ -55,70 +57,70 @@ const Testimonials = () => {
   };
 
   return (
-    <main className=" mt-16 px-8">
-    <section className="mt-16 max-w-6xl mx-auto">
-      <h2 className="text-2xl font-bold text-white mb-4 text-left md:text-left">
-        Testimonials
-      </h2>
+    <main className="mt-16 px-8">
+      <section className="mt-16 max-w-6xl mx-auto">
+        <h2 className="text-2xl font-bold text-white mb-4 text-left md:text-left">
+          Testimonials
+        </h2>
         <div className="relative mb-8">
-      <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
-      <div className="w-40 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
-    </div>
-      <Slider {...settings}>
-        {testimonialsData.map((testimonial) => (
-          <div
-            key={testimonial.id}
-            className="testimonial-card p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col md:flex-row items-center md:items-start gap-4"
-          >
-            <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-              <Image
-                src={testimonial.image}
-                alt={testimonial.name}
-                width={64}
-                height={64}
-                className="object-cover"
-              />
+          <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
+          <div className="w-40 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
+        </div>
+        <Slider {...settings}>
+          {testimonialsData.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              className="testimonial-card p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col md:flex-row items-center md:items-start gap-4"
+            >
+              <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  width={64}
+                  height={64}
+                  className="object-cover"
+                />
+              </div>
+              <div className="text-center md:text-left">
+                <p className="text-gray-300 text-sm mb-4 italic">
+                  "{testimonial.text}"
+                </p>
+                <div className="font-semibold text-white">{testimonial.name}</div>
+                <div className="text-gray-400 text-xs">{testimonial.company}</div>
+              </div>
             </div>
-            <div className="text-center md:text-left">
-              <p className="text-gray-300 text-sm mb-4 italic">
-                "{testimonial.text}"
-              </p>
-              <div className="font-semibold text-white">{testimonial.name}</div>
-              <div className="text-gray-400 text-xs">{testimonial.company}</div>
-            </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
 
-      <style jsx>{`
-        .testimonial-card {
-          background-color: #222222;
-        }
-        .slick-dots {
-          bottom: -20px;
-        }
-        .slick-dots li {
-          margin: 0;
-        }
-        .slick-dots li button:before {
-          font-size: 10px;
-          color: #666;
-        }
-        .slick-dots li.slick-active button:before {
-          color: #00aced;
-        }
-        .custom-dot {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background-color: #666;
-          margin: 0 4px;
-        }
-        .slick-dots .slick-active .custom-dot {
-          background-color: #00aced;
-        }
-      `}</style>
-    </section>
+        <style jsx>{`
+          .testimonial-card {
+            background-color: #222222;
+          }
+          .slick-dots {
+            bottom: -20px;
+          }
+          .slick-dots li {
+            margin: 0;
+          }
+          .slick-dots li button:before {
+            font-size: 10px;
+            color: #666;
+          }
+          .slick-dots li.slick-active button:before {
+            color: #00aced;
+          }
+          .custom-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #666;
+            margin: 0 4px;
+          }
+          .slick-dots .slick-active .custom-dot {
+            background-color: #00aced;
+          }
+        `}</style>
+      </section>
     </main>
   );
 };
