@@ -9,7 +9,7 @@ const BlogSection = () => {
       </div>
 
       {/* Blog Content Grid */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 px-14">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 px-14 py-3">
         {/* Sample Blog Post */}
         <BlogPost
           category="WordPress"

@@ -38,7 +38,7 @@ const PortfolioSection = () => {
       </div>
 
       {/* Filter Options */}
-      <div className="mt-8 flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6 text-gray-400 text-base sm:text-lg">
+      <div className="mt-8 flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6 text-gray-400 text-base sm:text-lg px-3">
         {["All", "Detailed", "Direct URL", "Image", "SoundCloud", "Video", "Vimeo Video", "YouTube Video"].map((filter) => (
           <button
             key={filter}
@@ -53,7 +53,7 @@ const PortfolioSection = () => {
       </div>
 
       {/* Portfolio Items Grid */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 px-14">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 px-14 py-3">
         {filteredItems.map((item, index) => (
           <PortfolioItem key={index} item={item} onClick={() => openModal(item)} />
         ))}

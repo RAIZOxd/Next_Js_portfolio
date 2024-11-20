@@ -1,5 +1,12 @@
 // pages/index.js
 'use client'
+import {
+  faBullhorn,
+  faLaptopCode,
+  faPenNib,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useRef } from 'react';
@@ -64,59 +71,86 @@ export default function Home() {
   </div>
 </main>
 
-      <main className="flex flex-col items-center mt-16 px-8">
-       {/* "What I Do" Section */}
-       <section className="mt-16 max-w-6xl text-left" ref={addToRefs}>
-          <h2 className="text-2xl font-bold text-white mb-4">What I Do</h2>
-          <div className="relative mb-8">
-            <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
-            <div className="w-28 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
-          </div>
+<main className="flex flex-col items-center mt-16 px-8">
+      {/* "What I Do" Section */}
+      <section className="mt-16 max-w-6xl text-left">
+        <h2 className="text-2xl font-bold text-white mb-4">What I Do</h2>
+        <div className="relative mb-8">
+          <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
+          <div className="w-28 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex items-start space-x-4">
-              <div className="text-3xl text-blue-500">✍️</div> {/* Icon Placeholder */}
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">Copywrite</h3>
-                <p className="text-gray-400">
-                  Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Vivamus blandit.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="text-3xl text-blue-500">🛒</div> {/* Icon Placeholder */}
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">Ecommerce</h3>
-                <p className="text-gray-400">
-                  Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Vivamus blandit.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="text-3xl text-blue-500">💻</div> {/* Icon Placeholder */}
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">Web Design</h3>
-                <p className="text-gray-400">
-                  Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Vivamus blandit.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="text-3xl text-blue-500">📣</div> {/* Icon Placeholder */}
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">Marketing</h3>
-                <p className="text-gray-400">
-                  Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Vivamus blandit.
-                </p>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Copywriting */}
+          <div className="flex items-start space-x-4">
+            <FontAwesomeIcon
+              icon={faPenNib}
+              className="text-3xl text-blue-500"
+            />
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Copywriting
+              </h3>
+              <p className="text-gray-400">
+                Craft compelling and impactful content that drives engagement
+                and boosts your brand’s voice.
+              </p>
             </div>
           </div>
-        </section>
-        
-      </main>
+
+          {/* Ecommerce */}
+          <div className="flex items-start space-x-4">
+            <FontAwesomeIcon
+              icon={faShoppingCart}
+              className="text-3xl text-blue-500"
+            />
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Ecommerce
+              </h3>
+              <p className="text-gray-400">
+                Build and optimize online stores for seamless shopping
+                experiences and increased conversions.
+              </p>
+            </div>
+          </div>
+
+          {/* Web Design */}
+          <div className="flex items-start space-x-4">
+            <FontAwesomeIcon
+              icon={faLaptopCode}
+              className="text-3xl text-blue-500"
+            />
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Web Design
+              </h3>
+              <p className="text-gray-400">
+                Design intuitive, user-friendly, and visually appealing
+                websites to enhance your digital presence.
+              </p>
+            </div>
+          </div>
+
+          {/* Marketing */}
+          <div className="flex items-start space-x-4">
+            <FontAwesomeIcon
+              icon={faBullhorn}
+              className="text-3xl text-blue-500"
+            />
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Marketing
+              </h3>
+              <p className="text-gray-400">
+                Develop strategic marketing campaigns to amplify your brand’s
+                reach and drive results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     {/* Testimonials Section */}
 

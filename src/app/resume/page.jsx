@@ -24,7 +24,7 @@ const ResumePage = () => {
       {/* Top Resume Header Section */}
       <div className="h-48 flex items-center justify-between px-14 border-t border-b border-gray-500">
         <h1 className="text-4xl font-bold">Resume</h1>
-        <span className="text-gray-400 text-lg">8 Years of Experience</span>
+        <span className="text-gray-400 text-sm sm:text-lg px-4">8 Years of Experience</span>
       </div>
 
       {/* Education and Experience Sections */}
