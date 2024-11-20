@@ -21,6 +21,8 @@ const Clients = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true, // Enables auto-slide
+    autoplaySpeed: 3000, // Auto-slide every 3 seconds
     customPaging: () => <div className="custom-dot" />,
     responsive: [
       {
@@ -40,59 +42,59 @@ const Clients = () => {
 
   return (
     <main className="mt-16 px-8">
-    <section className=" mt-16 max-w-6xl mx-auto text-center">
-      <h2 className="text-2xl font-bold text-white mb-4 text-left">Clients</h2>
-      <div className="relative mb-8">
-      <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
-      <div className="w-20 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
-    </div>
-      <Slider {...settings}>
-        {clientsData.map((client) => (
-          <div key={client.id} className="client-logo text-gray-500 text-lg font-semibold">
-            {client.name}
-          </div>
-        ))}
-      </Slider>
+      <section className="mt-16 max-w-6xl mx-auto text-center">
+        <h2 className="text-2xl font-bold text-white mb-4 text-left">Clients</h2>
+        <div className="relative mb-8">
+          <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
+          <div className="w-20 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
+        </div>
+        <Slider {...settings}>
+          {clientsData.map((client) => (
+            <div key={client.id} className="client-logo text-gray-500 text-lg font-semibold">
+              {client.name}
+            </div>
+          ))}
+        </Slider>
 
-      <style jsx>{`
-        .clients-container {
-          background-color: #1a1a1a;
-          padding: 2rem;
-          border-radius: 8px;
-        }
-        .underline {
-          width: 40px;
-          height: 2px;
-          background-color: #00aced;
-        }
-        .client-logo {
-          padding: 1rem;
-        }
-        .slick-dots {
-          bottom: -30px;
-        }
-        .slick-dots li {
-          margin: 0;
-        }
-        .slick-dots li button:before {
-          font-size: 10px;
-          color: #666;
-        }
-        .slick-dots li.slick-active button:before {
-          color: #00aced;
-        }
-        .custom-dot {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background-color: #666;
-          margin: 0 4px;
-        }
-        .slick-dots .slick-active .custom-dot {
-          background-color: #00aced;
-        }
-      `}</style>
-    </section>
+        <style jsx>{`
+          .clients-container {
+            background-color: #1a1a1a;
+            padding: 2rem;
+            border-radius: 8px;
+          }
+          .underline {
+            width: 40px;
+            height: 2px;
+            background-color: #00aced;
+          }
+          .client-logo {
+            padding: 1rem;
+          }
+          .slick-dots {
+            bottom: -30px;
+          }
+          .slick-dots li {
+            margin: 0;
+          }
+          .slick-dots li button:before {
+            font-size: 10px;
+            color: #666;
+          }
+          .slick-dots li.slick-active button:before {
+            color: #00aced;
+          }
+          .custom-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #666;
+            margin: 0 4px;
+          }
+          .slick-dots .slick-active .custom-dot {
+            background-color: #00aced;
+          }
+        `}</style>
+      </section>
     </main>
   );
 };
