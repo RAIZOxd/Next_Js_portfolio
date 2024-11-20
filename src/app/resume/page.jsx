@@ -113,7 +113,7 @@ const ResumePage = () => {
             <span className="px-2 py-1 rounded-full border border-gray-600 text-sm sm:text-base">
               2016 - Current
             </span>
-            <div className="ml-8 sm:ml-12 pl-4 border-l border-gray-700">
+            <div className="ml-8 sm:ml-12 pl-4 border-l border-gray-700 py-2">
               <p className="text-xs sm:text-sm text-gray-400">
                 Locost Accessories
               </p>
@@ -133,7 +133,7 @@ const ResumePage = () => {
             <span className="px-2 py-1 rounded-full border border-gray-600 text-sm sm:text-base">
               2013 - 2016
             </span>
-            <div className="ml-8 sm:ml-12 pl-4 border-l border-gray-700">
+            <div className="ml-8 sm:ml-12 pl-4 border-l border-gray-700 py-2">
               <p className="text-xs sm:text-sm text-gray-400">
                 Locost Accessories
               </p>
@@ -153,7 +153,7 @@ const ResumePage = () => {
             <span className="px-2 py-1 rounded-full border border-gray-600 text-sm sm:text-base">
               2011 - 2013
             </span>
-            <div className="ml-8 sm:ml-12 pl-4 border-l border-gray-700">
+            <div className="ml-8 sm:ml-12 pl-4 border-l border-gray-700 py-2">
               <p className="text-xs sm:text-sm text-gray-400">Sagebrush</p>
               <h3 className="font-semibold text-base sm:text-lg">
                 Junior UI/UX Designer

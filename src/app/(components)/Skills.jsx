@@ -1,5 +1,5 @@
-// components/Skills.js
-
+import { useState } from "react";
+import Modal from "react-modal";
 
 const Skills = () => {
   return (
@@ -10,8 +10,14 @@ const Skills = () => {
         <section>
           <h2 className="text-3xl font-bold border-b-2 border-blue-500 inline-block mb-6">Certificates</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
-            <CertificateCard icon="{less}" title="Psychology of Internation Design" />
-            <CertificateCard icon="jQuery" title="Psychology of Internation Design" />
+            <CertificateCard 
+              imageSrc="path-to-less-logo.jpg" 
+              title="Psychology of International Design" 
+            />
+            <CertificateCard 
+              imageSrc="path-to-jquery-logo.jpg" 
+              title="Psychology of International Design" 
+            />
           </div>
         </section>
 
@@ -40,23 +46,53 @@ const Skills = () => {
   );
 };
 
+// CertificateCard Component with Image Popup
+const CertificateCard = ({ imageSrc, title }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-
-// CertificateCard Component to create a card similar to the image layout
-const CertificateCard = ({ icon, title }) => {
   return (
     <div className="bg-gray-800 p-6 rounded-lg flex items-center space-x-4">
-      <div className="text-5xl text-gray-400">{icon}</div>
+      {/* Clickable Image */}
+      <div>
+        <img
+          src={imageSrc}
+          alt={title}
+          className="w-16 h-16 object-cover rounded-lg cursor-pointer"
+          onClick={() => setIsModalOpen(true)}
+        />
+      </div>
+
       <div>
         <h3 className="text-lg font-semibold">{title}</h3>
         <p className="text-sm text-gray-500">Membership ID: XXXX</p>
         <p className="text-sm text-gray-500">19 April 2018</p>
       </div>
+
+      {/* Modal for Image Popup */}
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={() => setIsModalOpen(false)}
+        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75"
+        overlayClassName="fixed inset-0 bg-black bg-opacity-50"
+        ariaHideApp={false} // Only needed if you're not specifying `root`
+      >
+        <div className="relative">
+          <img
+            src={imageSrc}
+            alt={title}
+            className="w-auto h-auto max-w-full max-h-full rounded-lg"
+          />
+          <button
+            onClick={() => setIsModalOpen(false)}
+            className="absolute top-2 right-2 text-white bg-gray-800 rounded-full p-2"
+          >
+            ✕
+          </button>
+        </div>
+      </Modal>
     </div>
   );
 };
-
-
 
 // SkillBar Component to represent each skill with a progress bar
 const SkillBar = ({ skill, level }) => {
