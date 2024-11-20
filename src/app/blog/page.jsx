@@ -24,7 +24,7 @@ const BlogSection = () => {
   return (
     <div className="min-h-screen text-white" ref={sectionRef}>
       {/* Blog Header */}
-      <div className="h-48 flex items-center justify-start px-14 border-t border-b border-gray-500">
+      <div className="h-48 flex items-center justify-start px-14 border-t border-b border-gray-500" ref={addToRefs}>
         <h2 className="text-4xl font-bold text-white">Blog</h2>
       </div>
 
