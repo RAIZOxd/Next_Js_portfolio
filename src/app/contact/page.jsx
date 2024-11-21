@@ -29,7 +29,7 @@ const ContactSection = () => {
   return (
     <div className="min-h-screen text-white" ref={sectionRef}>
       {/* Contact Header */}
-      <div className="h-48 flex items-center justify-between px-4 sm:px-14 border-t border-b border-gray-500" ref={addToRefs}>
+      <div className="h-48 flex items-center justify-between px-4 sm:px-14 border-t border-b border-gray-500 bg-[#252525]" ref={addToRefs}>
         <h1 className="text-3xl sm:text-4xl font-bold">Contact</h1>
         <a href="#get-in-touch" className="text-gray-400 text-sm sm:text-lg">
           Get in Touch
@@ -127,8 +127,8 @@ const ContactPage = () => {
           <h2 className="text-2xl sm:text-2xl font-semibold mb-8" ref={sectionRef}>
             How Can I Help You?
             <div className="relative mb-8">
-            <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
-            <div className="w-60 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
+            <div className="w-10 h-0.5 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
+            <div className="w-60 h-0.5 bg-gray-600 mt-1"></div> {/* Gray line */}
           </div>
           </h2>
           <form className="space-y-6" ref={sectionRef}>

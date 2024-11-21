@@ -53,7 +53,7 @@ const PortfolioSection = () => {
   return (
     <div className="min-h-screen text-white" ref={sectionRef}>
       {/* Portfolio Header */}
-      <div className="h-48 flex items-center justify-start px-14 border-t border-b border-gray-500" ref={addToRefs}>
+      <div className="h-48 flex items-center justify-start px-14 border-t border-b border-gray-500 bg-[#252525]" ref={addToRefs}>
         <h2 className="text-4xl font-bold text-white">Portfolio</h2>
       </div>
 

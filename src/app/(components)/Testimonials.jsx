@@ -59,18 +59,18 @@ const Testimonials = () => {
   return (
     <main className="mt-16 px-8">
       <section className="mt-16 max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-white mb-4 text-left md:text-left">
+        <h2 className="text-2xl font-bold text-white text-left md:text-left">
           Testimonials
         </h2>
         <div className="relative mb-8">
-          <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
-          <div className="w-40 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
+          <div className="w-10 h-0.5 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
+          <div className="w-40 h-0.5 bg-gray-600 mt-1"></div> {/* Gray line */}
         </div>
         <Slider {...settings}>
           {testimonialsData.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="testimonial-card p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col md:flex-row items-center md:items-start gap-4"
+              className="testimonial-card p-6 bg-[#333333] rounded-lg shadow-lg flex flex-col md:flex-row items-center md:items-start gap-4"
             >
               <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
                 <Image

@@ -43,10 +43,10 @@ const Clients = () => {
   return (
     <main className="mt-16 px-8">
       <section className="mt-16 max-w-6xl mx-auto text-center">
-        <h2 className="text-2xl font-bold text-white mb-4 text-left">Clients</h2>
+        <h2 className="text-2xl font-bold text-white text-left">Clients</h2>
         <div className="relative mb-8">
-          <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
-          <div className="w-20 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
+          <div className="w-10 h-0.5 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
+          <div className="w-20 h-0.5 bg-gray-600 mt-1"></div> {/* Gray line */}
         </div>
         <Slider {...settings}>
           {clientsData.map((client) => (

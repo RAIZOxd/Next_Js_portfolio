@@ -62,10 +62,10 @@ export default function Home() {
 
 {/* Button Section */}
 <div className="flex flex-col items-center md:flex-row md:justify-start md:items-center space-y-4 md:space-y-0 md:space-x-4 mt-4">
-  <button className="px-6 py-2 border-2 border-blue-500 text-gray-200 rounded-3xl shadow-lg hover:shadow-2xl hover:bg-blue-500 hover:text-white transition">
+  <button className="px-6 py-2 border-2 border-blue-500 text-gray-200 rounded-3xl shadow-lg hover:shadow-2xl hover:bg-blue-500 hover:text-white transition bg-[#333333]">
     Download CV
   </button>
-  <button className="px-6 py-2 border-2 border-gray-400 text-gray-200 rounded-3xl shadow-lg hover:shadow-2xl hover:bg-gray-400 hover:text-gray-800 transition">
+  <button className="px-6 py-2 border-2 border-gray-400 text-gray-200 rounded-3xl shadow-lg hover:shadow-2xl hover:bg-gray-400 hover:text-gray-800 transition bg-[#333333]">
     Contact
   </button>
 </div>
@@ -76,10 +76,10 @@ export default function Home() {
 <main className="flex flex-col container mx-auto items-center mt-16 px-8">
       {/* "What I Do" Section */}
       <section className="mt-16 max-w-6xl text-left">
-        <h2 className="text-2xl font-bold text-white mb-4">What I Do</h2>
+        <h2 className="text-2xl font-bold text-white">What I Do</h2>
         <div className="relative mb-8">
-          <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
-          <div className="w-28 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
+          <div className="w-10 h-0.5 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
+          <div className="w-28 h-0.5 bg-gray-600 mt-1"></div> {/* Gray line */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

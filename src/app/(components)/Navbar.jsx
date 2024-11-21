@@ -15,8 +15,8 @@ const Navbar = () => {
   const isActive = (path) => pathname === path;
 
   return (
-    <header className="bg-darkGray p-4 md:p-6">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className="bg-darkGray p-4 md:p-6 my-5">
+      <div className="flex justify-between items-center px-6">
         {/* Logo */}
         <div className="flex items-center">
           <div className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-black text-lg">

@@ -22,7 +22,7 @@ const ResumePage = () => {
   return (
     <div className=" min-h-screen text-white" ref={sectionRef}>
       {/* Top Resume Header Section */}
-      <div className="h-48 flex items-center justify-between px-14 border-t border-b border-gray-500" ref={addToRefs}>
+      <div className="h-48 flex items-center justify-between px-14 border-t border-b border-gray-500 bg-[#252525]" ref={addToRefs}>
         <h1 className="text-4xl font-bold">Resume</h1>
         <span className="text-gray-400 text-sm sm:text-lg px-4">8 Years of Experience</span>
       </div>
@@ -31,17 +31,17 @@ const ResumePage = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-8 px-16" ref={addToRefs}>
         {/* Education Section */}
         <div>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+          <h2 className="text-3xl font-bold mb-6">
             Education
             <div className="relative mb-8">
-      <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
-      <div className="w-40 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
+      <div className="w-10 h-0.5 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
+      <div className="w-40 h-0.5 bg-gray-600 mt-1"></div> {/* Gray line */}
     </div>
           </h2>
 
           {/* Education Item 1 */}
           <div className="relative pb-8">
-            <span className="px-2 py-1 rounded-full border border-gray-600 text-sm sm:text-base">
+            <span className="px-2 py-1 rounded-full border border-blue-600 text-sm sm:text-base">
               2009
             </span>
             <div className="ml-8 sm:ml-12 pl-4 border-l border-gray-700">
@@ -59,7 +59,7 @@ const ResumePage = () => {
 
           {/* Education Item 2 */}
           <div className="relative pb-8">
-            <span className="px-2 py-1 rounded-full border border-gray-600 text-sm sm:text-base">
+            <span className="px-2 py-1 rounded-full border border-blue-600  text-sm sm:text-base">
               2008
             </span>
             <div className="ml-8 sm:ml-12 pl-4 border-l border-gray-700">
@@ -79,7 +79,7 @@ const ResumePage = () => {
 
           {/* Education Item 3 */}
           <div className="relative pb-8">
-            <span className="px-2 py-1 rounded-full border border-gray-600 text-sm sm:text-base">
+            <span className="px-2 py-1 rounded-full border border-blue-600  text-sm sm:text-base">
               2007
             </span>
             <div className="ml-8 sm:ml-12 pl-4 border-l border-gray-700">
@@ -100,17 +100,17 @@ const ResumePage = () => {
 
         {/* Experience Section */}
         <div>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+          <h2 className="text-3xl font-bold mb-6">
             Experience
             <div className="relative mb-8">
-      <div className="w-10 h-1 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
-      <div className="w-40 h-1 bg-gray-600 mt-1"></div> {/* Gray line */}
+      <div className="w-10 h-0.5 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
+      <div className="w-40 h-0.5 bg-gray-600 mt-1"></div> {/* Gray line */}
     </div>
           </h2>
 
           {/* Experience Item 1 */}
           <div className="relative pb-8">
-            <span className="px-2 py-1 rounded-full border border-gray-600 text-sm sm:text-base">
+            <span className="px-2 py-1 rounded-full border border-blue-600 text-sm sm:text-base">
               2016 - Current
             </span>
             <div className="ml-8 sm:ml-12 pl-4 border-l border-gray-700 py-2">
@@ -130,7 +130,7 @@ const ResumePage = () => {
 
           {/* Experience Item 2 */}
           <div className="relative pb-8">
-            <span className="px-2 py-1 rounded-full border border-gray-600 text-sm sm:text-base">
+            <span className="px-2 py-1 rounded-full border border-blue-600 text-sm sm:text-base">
               2013 - 2016
             </span>
             <div className="ml-8 sm:ml-12 pl-4 border-l border-gray-700 py-2">
@@ -150,7 +150,7 @@ const ResumePage = () => {
 
           {/* Experience Item 3 */}
           <div className="relative pb-8">
-            <span className="px-2 py-1 rounded-full border border-gray-600 text-sm sm:text-base">
+            <span className="px-2 py-1 rounded-full border border-blue-600 text-sm sm:text-base">
               2011 - 2013
             </span>
             <div className="ml-8 sm:ml-12 pl-4 border-l border-gray-700 py-2">
