@@ -1,14 +1,18 @@
-'use client'
+'use client';
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // Correct for client-side routing in Next.js 13+
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname(); // Get current path for active link
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const isActive = (path) => pathname === path;
 
   return (
     <header className="bg-darkGray p-4 md:p-6">
@@ -23,24 +27,47 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex ml-auto text-gray-300">
-          <ul className="flex space-x-8 font-bold text-sm">
-            <li className="hover:text-white">
-              <Link href="/">About Me</Link>
-            </li>
-            <li className="hover:text-white">
-              <Link href="/resume">Resume</Link>
-            </li>
-            <li className="hover:text-white">
-              <Link href="/portfolio">Portfolio</Link>
-            </li>
-            <li className="hover:text-white">
-              <Link href="/blog">Blog</Link>
-            </li>
-            <li className="hover:text-white">
-              <Link href="/contact">Contact</Link>
-            </li>
-          </ul>
+        <nav className="hidden md:flex ml-auto justify-between space-x-8 text-gray-300 font-bold text-sm">
+          <Link
+            href="/"
+            className={`hover:text-white ${
+              isActive("/") ? "text-white" : ""
+            }`}
+          >
+            About Me
+          </Link>
+          <Link
+            href="/resume"
+            className={`hover:text-white ${
+              isActive("/resume") ? "text-white" : ""
+            }`}
+          >
+            Resume
+          </Link>
+          <Link
+            href="/portfolio"
+            className={`hover:text-white ${
+              isActive("/portfolio") ? "text-white" : ""
+            }`}
+          >
+            Portfolio
+          </Link>
+          <Link
+            href="/blog"
+            className={`hover:text-white ${
+              isActive("/blog") ? "text-white" : ""
+            }`}
+          >
+            Blog
+          </Link>
+          <Link
+            href="/contact"
+            className={`hover:text-white ${
+              isActive("/contact") ? "text-white" : ""
+            }`}
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -55,28 +82,58 @@ const Navbar = () => {
       {isOpen && (
         <nav className="md:hidden mt-4 text-gray-300">
           <ul className="space-y-4 font-light text-sm text-center">
-            <li className="hover:text-white">
-              <Link href="/" onClick={toggleMenu}>
+            <li>
+              <Link
+                href="/"
+                onClick={toggleMenu}
+                className={`hover:text-white ${
+                  isActive("/") ? "text-white" : ""
+                }`}
+              >
                 About Me
               </Link>
             </li>
-            <li className="hover:text-white">
-              <Link href="/resume" onClick={toggleMenu}>
+            <li>
+              <Link
+                href="/resume"
+                onClick={toggleMenu}
+                className={`hover:text-white ${
+                  isActive("/resume") ? "text-white" : ""
+                }`}
+              >
                 Resume
               </Link>
             </li>
-            <li className="hover:text-white">
-              <Link href="/portfolio" onClick={toggleMenu}>
+            <li>
+              <Link
+                href="/portfolio"
+                onClick={toggleMenu}
+                className={`hover:text-white ${
+                  isActive("/portfolio") ? "text-white" : ""
+                }`}
+              >
                 Portfolio
               </Link>
             </li>
-            <li className="hover:text-white">
-              <Link href="/blog" onClick={toggleMenu}>
+            <li>
+              <Link
+                href="/blog"
+                onClick={toggleMenu}
+                className={`hover:text-white ${
+                  isActive("/blog") ? "text-white" : ""
+                }`}
+              >
                 Blog
               </Link>
             </li>
-            <li className="hover:text-white">
-              <Link href="/contact" onClick={toggleMenu}>
+            <li>
+              <Link
+                href="/contact"
+                onClick={toggleMenu}
+                className={`hover:text-white ${
+                  isActive("/contact") ? "text-white" : ""
+                }`}
+              >
                 Contact
               </Link>
             </li>
