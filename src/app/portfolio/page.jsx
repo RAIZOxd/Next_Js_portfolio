@@ -58,7 +58,7 @@ const PortfolioSection = () => {
       </div>
 
       {/* Filter Options */}
-      <div className="mt-8 flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6 text-gray-400 text-base sm:text-lg px-3" ref={addToRefs}>
+      <div className="mt-8 flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6 text-gray-400 text-base sm:text-lg px-16" ref={addToRefs}>
         {['All', 'Detailed', 'Direct URL', 'Image', 'SoundCloud', 'Video', 'Vimeo Video', 'YouTube Video'].map((filter) => (
           <button
             key={filter}

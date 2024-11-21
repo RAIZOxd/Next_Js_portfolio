@@ -1,31 +1,35 @@
-import { useState } from "react";
-import Modal from "react-modal";
+'use client';
+import { useState } from 'react';
+import Modal from 'react-modal';
 
 const Skills = () => {
   return (
-    <div className="min-h-screen p-10 text-white">
-      <div className="max-w-4xl mx-auto space-y-16">
-        
+    <div className="min-h-screen px-10 py-6 text-white">
+      <div className="max-w-6xl mx-auto space-y-16">
         {/* Certificates Section */}
         <section>
-          <h2 className="text-3xl font-bold border-b-2 border-blue-500 inline-block mb-6">Certificates</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
-            <CertificateCard 
-              imageSrc="path-to-less-logo.jpg" 
-              title="Psychology of International Design" 
+          <h2 className="text-3xl font-bold border-b-2 border-blue-500 inline-block mb-6">
+            Certificates
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <CertificateCard
+              imageSrc="path-to-less-logo.jpg"
+              title="Psychology of International Design"
             />
-            <CertificateCard 
-              imageSrc="path-to-jquery-logo.jpg" 
-              title="Psychology of International Design" 
+            <CertificateCard
+              imageSrc="path-to-jquery-logo.jpg"
+              title="Psychology of International Design"
             />
           </div>
         </section>
 
         {/* Skills Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Design Skills */}
           <section>
-            <h2 className="text-2xl font-bold border-b-2 border-blue-500 inline-block mb-6">Design Skills</h2>
+            <h2 className="text-2xl font-bold border-b-2 border-blue-500 inline-block mb-6">
+              Design Skills
+            </h2>
             <SkillBar skill="UI/UX Design" level="95%" />
             <SkillBar skill="Print Design" level="75%" />
             <SkillBar skill="Graphic Design" level="85%" />
@@ -34,7 +38,9 @@ const Skills = () => {
 
           {/* Coding Skills */}
           <section>
-            <h2 className="text-2xl font-bold border-b-2 border-blue-500 inline-block mb-6">Coding Skills</h2>
+            <h2 className="text-2xl font-bold border-b-2 border-blue-500 inline-block mb-6">
+              Coding Skills
+            </h2>
             <SkillBar skill="HTML / CSS" level="100%" />
             <SkillBar skill="PHP" level="90%" />
             <SkillBar skill="JavaScript" level="90%" />
@@ -46,12 +52,14 @@ const Skills = () => {
   );
 };
 
-// CertificateCard Component with Image Popup
+// CertificateCard Component with Hover Effect
 const CertificateCard = ({ imageSrc, title }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="bg-gray-800 p-6 rounded-lg flex items-center space-x-4">
+    <div
+      className="bg-gray-800 p-6 rounded-lg flex items-center space-x-4 w-full transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+    >
       {/* Clickable Image */}
       <div>
         <img
@@ -74,7 +82,7 @@ const CertificateCard = ({ imageSrc, title }) => {
         onRequestClose={() => setIsModalOpen(false)}
         className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75"
         overlayClassName="fixed inset-0 bg-black bg-opacity-50"
-        ariaHideApp={false} // Only needed if you're not specifying `root`
+        ariaHideApp={false}
       >
         <div className="relative">
           <img
@@ -94,7 +102,7 @@ const CertificateCard = ({ imageSrc, title }) => {
   );
 };
 
-// SkillBar Component to represent each skill with a progress bar
+// SkillBar Component
 const SkillBar = ({ skill, level }) => {
   return (
     <div className="mb-4">
