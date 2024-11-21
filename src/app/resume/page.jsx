@@ -28,7 +28,7 @@ const ResumePage = () => {
       </div>
 
       {/* Education and Experience Sections */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-8 px-16" ref={addToRefs}>
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-8 px-16" ref={addToRefs}>
         {/* Education Section */}
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-6">

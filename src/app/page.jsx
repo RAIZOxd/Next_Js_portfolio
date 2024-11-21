@@ -35,7 +35,7 @@ export default function Home() {
     }
   };
   return (
-    <div className="min-h-screen bg-darkGray text-gray-400" ref={sectionRef}>
+    <div className="min-h-screen container mx-auto bg-darkGray text-gray-400" ref={sectionRef}>
       <Head>
         <title>Frontend Developer - Alex Smith</title>
       </Head>
@@ -73,7 +73,7 @@ export default function Home() {
   </div>
 </main>
 
-<main className="flex flex-col items-center mt-16 px-8">
+<main className="flex flex-col container mx-auto items-center mt-16 px-8">
       {/* "What I Do" Section */}
       <section className="mt-16 max-w-6xl text-left">
         <h2 className="text-2xl font-bold text-white mb-4">What I Do</h2>
