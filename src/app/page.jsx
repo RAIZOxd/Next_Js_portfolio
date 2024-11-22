@@ -39,15 +39,20 @@ export default function Home() {
       <Head>
         <title>Frontend Developer - Alex Smith</title>
       </Head>
-     <main className="flex flex-col items-center px-4 md:flex-row md:items-start md:justify-center md:mt-16 md:px-8 space-y-6 md:space-y-0 md:space-x-12 py-20">
+     <main className="flex flex-col items-center px-4 md:flex-row md:items-start md:justify-center md:mt-16 md:px-8 space-y-6 md:space-y-0 md:space-x-12 py-10">
 {/* Profile Picture Section */}
-<div className="flex-shrink-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-900 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-slate-950" ref={addToRefs}>
+<div
+  className="relative flex-shrink-0 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full border-[15px] border-[#444444] shadow-[0_0_20px_rgba(5,5,5,5.5)] transition-all duration-300 hover:scale-110 hover:border-[#444444] hover:shadow-[0_0_40px_rgba(0,0,0,0.8)]"
+  ref={addToRefs}
+>
   <Image
     src={img1}
     alt="Profile Picture"
-    className="w-full h-full object-cover"
+    className="w-full h-full object-cover rounded-full"
   />
 </div>
+
+
 
 
   {/* Info Section */}
