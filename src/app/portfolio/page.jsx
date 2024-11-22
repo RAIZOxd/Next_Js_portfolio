@@ -184,7 +184,7 @@ const PortfolioSection = () => {
 const PortfolioItem = ({ item, onClick }) => {
   return (
     <div
-      className="relative bg-gray-700 rounded-lg overflow-hidden shadow-lg cursor-pointer"
+      className="relative bg-gray-700 rounded-lg overflow-hidden shadow-lg cursor-pointer transform transition-transform duration-200 hover:scale-105 hover:shadow-2xl"
       onClick={onClick}
     >
       <img
