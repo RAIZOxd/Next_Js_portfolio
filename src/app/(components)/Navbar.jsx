@@ -28,7 +28,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <nav className="hidden md:flex ml-auto justify-between space-x-8 text-gray-300 font-bold text-sm">
+          <nav className="hidden md:flex ml-auto justify-between space-x-8 text-gray-400 font-bold text-sm">
             <Link
               href="/"
               className={`hover:text-white ${
