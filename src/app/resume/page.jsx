@@ -1,7 +1,7 @@
-'use client'
-import { useEffect, useRef } from 'react';
+"use client";
+import { useEffect, useRef } from "react";
 import Skills from "../(components)/Skills";
-import { animateFadeInUp } from '../(components)/gsapAnimations';
+import { animateFadeInUp } from "../(components)/gsapAnimations";
 
 const ResumePage = () => {
   // Refs for the sections to be animated
@@ -22,21 +22,36 @@ const ResumePage = () => {
   return (
     <div className=" min-h-screen text-white" ref={sectionRef}>
       {/* Top Resume Header Section */}
-      <div className="h-48 flex items-center justify-between px-14 border-t border-b border-gray-500 bg-[#252525]" ref={addToRefs}>
-        <h1 className="text-4xl font-bold">Resume</h1>
-        <span className="text-gray-400 text-sm sm:text-lg px-4">8 Years of Experience</span>
+      <div
+        className="border-t border-b border-gray-500 bg-[#252525]"
+        ref={addToRefs}
+      >
+        <div
+          className="container mx-auto h-48 flex items-center justify-between px-6 sm:px-8 md:px-14"
+          ref={addToRefs}
+        >
+          <h1 className="text-4xl font-bold text-white">Resume</h1>
+          <span className="text-gray-400 text-sm sm:text-lg px-4">
+            8 Years of Experience
+          </span>
+        </div>
       </div>
 
       {/* Education and Experience Sections */}
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-8 px-16" ref={addToRefs}>
+      <div
+        className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-8 px-16"
+        ref={addToRefs}
+      >
         {/* Education Section */}
         <div>
           <h2 className="text-3xl font-bold mb-6">
             Education
             <div className="relative mb-8">
-      <div className="w-10 h-0.5 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
-      <div className="w-40 h-0.5 bg-gray-600 mt-1"></div> {/* Gray line */}
-    </div>
+              <div className="w-10 h-0.5 bg-blue-500 absolute top-0 left-0"></div>{" "}
+              {/* Blue line */}
+              <div className="w-40 h-0.5 bg-gray-600 mt-1"></div>{" "}
+              {/* Gray line */}
+            </div>
           </h2>
 
           {/* Education Item 1 */}
@@ -103,9 +118,11 @@ const ResumePage = () => {
           <h2 className="text-3xl font-bold mb-6">
             Experience
             <div className="relative mb-8">
-      <div className="w-10 h-0.5 bg-blue-500 absolute top-0 left-0"></div> {/* Blue line */}
-      <div className="w-40 h-0.5 bg-gray-600 mt-1"></div> {/* Gray line */}
-    </div>
+              <div className="w-10 h-0.5 bg-blue-500 absolute top-0 left-0"></div>{" "}
+              {/* Blue line */}
+              <div className="w-40 h-0.5 bg-gray-600 mt-1"></div>{" "}
+              {/* Gray line */}
+            </div>
           </h2>
 
           {/* Experience Item 1 */}

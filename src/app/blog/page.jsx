@@ -1,35 +1,42 @@
 //BlogSection
-'use client'
-import { useEffect, useRef } from 'react';
-import { animateFadeInUp } from '../(components)/gsapAnimations';
+"use client";
+import { useEffect, useRef } from "react";
+import { animateFadeInUp } from "../(components)/gsapAnimations";
 
 const BlogSection = () => {
+  // Refs for the sections to be animated
+  const sectionRef = useRef(null);
+  const fadeInUpElements = useRef([]); // Array to hold references to elements
 
-    // Refs for the sections to be animated
-    const sectionRef = useRef(null);
-    const fadeInUpElements = useRef([]); // Array to hold references to elements
-  
-    useEffect(() => {
-      if (fadeInUpElements.current.length > 0 && sectionRef.current) {
-        animateFadeInUp(fadeInUpElements.current, sectionRef.current); // Call the animation function
-      }
-    }, []);
-  
-    const addToRefs = (el) => {
-      if (el && !fadeInUpElements.current.includes(el)) {
-        fadeInUpElements.current.push(el); // Add element to refs array
-      }
-    };
+  useEffect(() => {
+    if (fadeInUpElements.current.length > 0 && sectionRef.current) {
+      animateFadeInUp(fadeInUpElements.current, sectionRef.current); // Call the animation function
+    }
+  }, []);
+
+  const addToRefs = (el) => {
+    if (el && !fadeInUpElements.current.includes(el)) {
+      fadeInUpElements.current.push(el); // Add element to refs array
+    }
+  };
 
   return (
     <div className="min-h-screen text-white" ref={sectionRef}>
       {/* Blog Header */}
-      <div className="h-48 flex items-center justify-start px-14 border-t border-b border-gray-500 bg-[#252525]" ref={addToRefs}>
-        <h2 className="text-4xl font-bold text-white">Blog</h2>
+      <div
+        className="h-48 flex items-center justify-start px-14 border-t border-b border-gray-500 bg-[#252525]"
+        ref={addToRefs}
+      >
+        <div className="container mx-auto flex items-center justify-between px-4 sm:px-8 lg:px-14 h-20">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white">Blog</h1>
+        </div>
       </div>
 
       {/* Blog Content Grid */}
-      <div className="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 px-14 py-3" ref={addToRefs}>
+      <div
+        className="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 px-14 py-3"
+        ref={addToRefs}
+      >
         {/* Sample Blog Post */}
         <BlogPost
           category="WordPress"
@@ -75,7 +82,6 @@ const BlogPost = ({ category, date, title, imageUrl }) => {
         <h3 className="text-xl font-semibold text-white">{title}</h3>
       </div>
     </div>
-    
   );
 };
 
